@@ -24,10 +24,10 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
 
       - name: Install frontend dependencies
-        run: npm install
+        run: bun install
 
       - name: Build the Windows installer(s)
-        run: npm run desktop:build
+        run: bun run desktop:build
 
       # NSIS installer (.exe)
       - name: Upload NSIS installer
