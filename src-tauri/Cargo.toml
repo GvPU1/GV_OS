@@ -1,0 +1,27 @@
+[package]
+name = "gv-os"
+version = "1.0.0"
+description = "GV OS — local-first productivity desktop app"
+edition = "2021"
+
+[lib]
+name = "gv_os_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# "devtools" is temporary — lets you right-click > Inspect Element in the built
+# app to see console errors / use the Performance profiler. Remove it again
+# once you've root-caused the freeze, since it also works in release builds.
+tauri = { version = "2", features = ["devtools"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+panic = "abort"
+codegen-units = 1
+lto = true
+opt-level = "s"
+strip = true

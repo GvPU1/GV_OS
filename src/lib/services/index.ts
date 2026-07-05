@@ -1,0 +1,15 @@
+export * from "./base-service";
+export { TaskService } from "./task-service";
+export { AssignmentService } from "./assignment-service";
+export { ProjectService } from "./project-service";
+export { CalendarService } from "./calendar-service";
+export { StudyService } from "./study-service";
+export { NotesService } from "./notes-service";
+export { DashboardService } from "./dashboard-service";
+export { IdeaService } from "./idea-service";
+export { CertificationService } from "./certification-service";
+export { SkillService } from "./skill-service";
+export { GoalService } from "./goal-service";
+export { ReminderService } from "./reminder-service";
+export { SearchService, type SearchResult, type SearchResultType } from "./search-service";
+export { BackupService, type BackupFile } from "./backup-service";
